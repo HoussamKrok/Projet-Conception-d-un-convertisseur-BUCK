@@ -148,22 +148,22 @@ Pour $f_{sw}$ = 2100 kHz, on obtient **R_RT ≈ 6 kΩ**. Valeur normalisée util
 
 ![BOM](images/bom.png)
 
-| Rôle | Valeur | Boîtier (JLCPCB) | Réf. JLCPCB | Réf. commande | Fabricant |
-|---|---|---|---|---|---|
-| Condensateurs d'entrée (HF) | 2 × 100 nF | 0402 | C53084447 | 885012206095 | Würth |
-| Condensateurs d'entrée | 2 × 4,7 µF | 1206 | C29823 | 885012208094 | Würth |
-| Condensateur d'entrée (électrolytique) | 82 µF | à définir | C188358 | MAL218097002E3 | Vishay |
-| VCC | 1 µF | 0402 | C49210445 | 885012206052 | Würth |
-| RT | 6 kΩ / 6,2 kΩ | 0805 | C55205337 | PTN0805K6201JBT1 | Vishay |
-| PGOOD (pull-up) | 10 kΩ | 0402 | C25744 | PTN0603K1002BSTS | Vishay |
-| Inductance | 1,2 µH | 1008 | C88538 | XAL4020-122MEC | Coilcraft |
-| CBOOT | 100 nF | 0402 | C53084507 | – | – |
-| FB haut (RFBT) | 100 kΩ | 0402 | C25741 | PTN0603K1003FGWS | Vishay |
-| FB bas (RFBB) | 24,9 kΩ | 0402 | C25874 | PTN0603K2492FBTS | Vishay |
-| Cff | 33 pF | 0402 | C2169047 | 885012006020 | Würth |
-| Rff | 1 kΩ | 0402 | C11702 | PTN0603K1001JBTS | Vishay |
-| Condensateurs de sortie | 3 × 22 µF | 0805 | C54916829 | 885012107011 | Würth |
-| Connecteurs d'entrée/sortie | 2 × borniers à vis | – | – | 691214300002 | Würth |
+| Rôle | Valeur | Boîtier  | Réf. commande | Fabricant |
+|---|---|---|---|---|
+| Condensateurs d'entrée (HF) | 2 × 100 nF | 0402 | 885012206095 | Würth |
+| Condensateurs d'entrée | 2 × 4,7 µF | 1206 | 885012208094 | Würth |
+| Condensateur d'entrée (électrolytique) | 82 µF | à définir | MAL218097002E3 | Vishay |
+| VCC | 1 µF | 0402 | 885012206052 | Würth |
+| RT | 6 kΩ / 6,2 kΩ | 0805 | PTN0805K6201JBT1 | Vishay |
+| PGOOD (pull-up) | 10 kΩ | 0402 | PTN0603K1002BSTS | Vishay |
+| Inductance | 1,2 µH | 1008 | XAL4020-122MEC | Coilcraft |
+| CBOOT | 100 nF | 0402 | – | – |
+| FB haut (RFBT) | 100 kΩ | 0402 | PTN0603K1003FGWS | Vishay |
+| FB bas (RFBB) | 24,9 kΩ | 0402 | PTN0603K2492FBTS | Vishay |
+| Cff | 33 pF | 0402 | 885012006020 | Würth |
+| Rff | 1 kΩ | 0402 | PTN0603K1001JBTS | Vishay |
+| Condensateurs de sortie | 3 × 22 µF | 0805 | 885012107011 | Würth |
+| Connecteurs d'entrée/sortie | 2 × borniers à vis | – | 691214300002 | Würth |
 
 ---
 
