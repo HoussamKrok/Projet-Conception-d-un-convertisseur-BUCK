@@ -189,31 +189,6 @@ Points d'attention du routage *(à adapter à ce que tu as réellement fait)* :
 
 ---
 
-## 8. Tests et résultats
-
-*À compléter après réception et assemblage du PCB :*
-
-- [ ] Vérification visuelle et continuité
-- [ ] Mise sous tension à faible courant
-- [ ] Mesure de $V_{out}$ et de la régulation en charge
-- [ ] Mesure de la fréquence de commutation et de l'ondulation de $V_{out}$
-- [ ] Rendement en fonction du courant de sortie
-- [ ] Température du circuit à 6 A
-
----
-
-## 9. Structure du dépôt
-
-```
-.
-├── README.md
-├── images/            # captures du schéma, du routage, vue 3D, BOM
-├── kicad/             # projet KiCad (schéma, PCB, symbole LMQ61460-Q1)
-├── fabrication/       # Gerber, BOM et CPL pour JLCPCB
-└── datasheet/         # lien ou copie de la datasheet
-```
-
----
 
 ## 10. Références
 
