@@ -148,17 +148,18 @@ Pour $f_{sw}$ = 2100 kHz, on obtient **R_RT ≈ 6 kΩ**. Valeur normalisée util
 
 | Rôle | Valeur | Boîtier  | Réf. commande | Fabricant |
 |---|---|---|---|---|
-| Condensateurs d'entrée (HF) | 2 × 100 nF | 0402 | 885012206095 | Würth |
+| Convertisseur Buck | - | VQFN-14-HR | C1855832 | LCSC |
+| Condensateurs d'entrée (HF) | 2 × 100 nF | 0602 | 885012206095 | Würth |
 | Condensateurs d'entrée | 2 × 4,7 µF | 1206 | 885012208094 | Würth |
 | Condensateur d'entrée (électrolytique) | 82 µF | datasheet | 875075655003 | Würth |
-| VCC | 1 µF | 0402 | 885012206052 | Würth |
+| VCC | 1 µF | 0603 | 885012206052 | Würth |
 | RT | 6 kΩ / 6,49 kΩ | 0603 | 560112116114 | Würth |
 | PGOOD (pull-up) | 10 kΩ | 0603 | 560112116005 | Würth |
 | Inductance | 1,2 µH | 1008 | XAL4020-122MEC | Coilcraft |
 | CBOOT | 100 nF | 0603 | 885012206046 | Würth |
 | FB haut (RFBT) | 100 kΩ | 0603 | 560112116004 | Würth |
 | FB bas (RFBB) | 24,9 kΩ | 0603 | 560112116140 | Würth |
-| Cff | 33 pF | 0402 | 885012006020 | Würth |
+| Cff | 33 pF | 0603 | 885012006020 | Würth |
 | Rff | 1 kΩ | 0603 | 560112116014 | Würth |
 | Condensateurs de sortie | 3 × 22 µF | 0805 | 885012107011 | Würth |
 | Connecteurs d'entrée/sortie | 2 × borniers à vis | 3.81 mm | 691214300002 | Würth |
