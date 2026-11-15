@@ -148,7 +148,7 @@ Pour $f_{sw}$ = 2100 kHz, on obtient **R_RT ≈ 6 kΩ**. Valeur normalisée util
 | Convertisseur Buck | - | VQFN-14-HR | C1855832 | LCSC |
 | Condensateurs d'entrée (HF) | 2 × 100 nF | 0602 | 885012206095 | Würth |
 | Condensateurs d'entrée | 2 × 4,7 µF | 1206 | 885012208094 | Würth |
-| Condensateur d'entrée (électrolytique) | 82 µF | datasheet | 875075655003 | Würth |
+| Condensateur d'entrée (électrolytique) | 82 µF | [datasheet](https://www.we-online.com/components/products/datasheet/875075655003.pdf) | 875075655003 | Würth |
 | VCC | 1 µF | 0603 | 885012206052 | Würth |
 | RT | 6 kΩ / 6,8 kΩ | 0805 | 560112120031 | Würth |
 | PGOOD (pull-up) | 10 kΩ | 0603 | 560112116005 | Würth |
@@ -176,7 +176,8 @@ Pour cette partie, j'ai essayé de respecter les consignes du Layout présentée
 
 ## 7. Références
 
-- Datasheet LMQ61460-Q1, Texas Instruments
+- Datasheet LMQ61460-Q1, [Texas Instruments](https://www.ti.com/lit/ds/symlink/lm61460-q1.pdf?ts=1794761123150&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FLM61460-Q1%253FkeyMatch%253DLM61460-Q1%2526tisearch%253Duniversal_search%2526usecase%253DGPN-ALT)
+- Condensateur d'entrée (82 µF), [Würth](https://www.we-online.com/components/products/datasheet/875075655003.pdf)
 
 ---
 
