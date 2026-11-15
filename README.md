@@ -12,12 +12,9 @@ Conception d'un prototype de PCB pour un convertisseur abaisseur (buck) synchron
 2. [Outils](#2-outils)
 3. [Schéma électrique](#3-schéma-électrique)
 4. [Dimensionnement](#4-dimensionnement)
-5. [Liste des composants (BOM)](#5-liste-des-composants-bom)
+5. [Liste des composants](#5-liste-des-composants-bom)
 6. [Routage du PCB](#6-routage-du-pcb)
-7. [Fabrication et commande](#7-fabrication-et-commande)
-8. [Tests et résultats](#8-tests-et-résultats)
-9. [Structure du dépôt](#9-structure-du-dépôt)
-10. [Références](#10-références)
+7. [Références](#7-références)
 
 ---
 
@@ -28,9 +25,9 @@ Conception d'un prototype de PCB pour un convertisseur abaisseur (buck) synchron
 | Circuit intégré | LMQ61460-Q1 (buck synchrone, courant de sortie max 6 A) |
 | Tension d'entrée nominale | 24 V |
 | Tension d'entrée max | 30 V à 36 V selon le cas étudié |
-| Tension de sortie | 5 V (cas d'étude), ajustable via le diviseur de rétroaction |
+| Tension de sortie | 5 V (cas d'étude), ajustable via le diviseur de tension du FB |
 | Courant de sortie max | 6 A |
-| Fréquence de commutation | 2,1 MHz |
+| Fréquence de commutation | 1,85 MHz |
 | Ondulation de courant dans l'inductance | K = 25 % |
 | Commande | Mode courant, rétroaction externe (FB) |
 
@@ -40,8 +37,8 @@ Conception d'un prototype de PCB pour un convertisseur abaisseur (buck) synchron
 
 - **KiCad** : schématique, création du symbole, routage
 - **JLCPCB** : fabrication du PCB et assemblage / composants CMS
-- **Vishay, Würth Elektronik (WE), Coilcraft** : composants commandés séparément
-- Datasheet du LMQ61460-Q1 (circuit d'application typique, Table 8-3)
+- **LCSC, Würth Elektronik (WE), Coilcraft** : composants commandés séparément
+- Datasheet du LMQ61460-Q1, et du condensateur de 82 µF
 
 ---
 
@@ -124,7 +121,7 @@ Un condensateur électrolytique en entrée (82 µF) est recommandé, voire néce
 | Élément | Rôle | Valeur |
 |---|---|---|
 | VCC | Alimentation des circuits de commande | 1 µF, 16 V, céramique |
-| CBOOT | Réserve d'énergie pour le driver du MOSFET high-side | 100 nF, 10 V, céramique |
+| CBOOT | Réserve d'énergie pour le driver du MOSFET high-side | 100 nF, min 10 V, céramique |
 | RBOOT | Réduit les EMI mais diminue le rendement | 0 Ω |
 | EN/SYNC | Démarrage / arrêt, réglable par diviseur de tension | voir ci-dessous |
 
@@ -140,7 +137,7 @@ Seuils de EN/SYNC (à confirmer avec la datasheet avant publication) :
 
 $$R_{RT}\,[\text{k}\Omega] = \left(\frac{1}{f_{sw}\,[\text{kHz}]} - 3{,}3 \cdot 10^{-5}\right) \cdot 1{,}346 \cdot 10^{4}$$
 
-Pour $f_{sw}$ = 2100 kHz, on obtient **R_RT ≈ 6 kΩ**. Valeur normalisée utilisée : 6,2 kΩ (Vishay) / 6 kΩ (JLCPCB), soit une fréquence réelle d'environ 2,0 MHz.
+Pour $f_{sw}$ = 2100 kHz, on obtient **R_RT ≈ 6 kΩ**. Valeur normalisée utilisée : 6,8 kΩ (Würth), soit une fréquence réelle d'environ 1,86 MHz.
 
 ---
 
@@ -153,7 +150,7 @@ Pour $f_{sw}$ = 2100 kHz, on obtient **R_RT ≈ 6 kΩ**. Valeur normalisée util
 | Condensateurs d'entrée | 2 × 4,7 µF | 1206 | 885012208094 | Würth |
 | Condensateur d'entrée (électrolytique) | 82 µF | datasheet | 875075655003 | Würth |
 | VCC | 1 µF | 0603 | 885012206052 | Würth |
-| RT | 6 kΩ / 6,49 kΩ | 0603 | 560112116114 | Würth |
+| RT | 6 kΩ / 6,8 kΩ | 0805 | 560112120031 | Würth |
 | PGOOD (pull-up) | 10 kΩ | 0603 | 560112116005 | Würth |
 | Inductance | 1,2 µH | 1008 | XAL4020-122MEC | Coilcraft |
 | CBOOT | 100 nF | 0603 | 885012206046 | Würth |
@@ -172,27 +169,14 @@ Pour $f_{sw}$ = 2100 kHz, on obtient **R_RT ≈ 6 kΩ**. Valeur normalisée util
 
 ![Vue 3D](images/3d_view.png)
 
-Points d'attention du routage *(à adapter à ce que tu as réellement fait)* :
-- condensateurs d'entrée 100 nF au plus près des broches VIN, boucle de commutation la plus courte possible
-- plan de masse continu sous le circuit
-- diviseur de rétroaction éloigné du noeud SW
-- piste de FB courte, connectée au point de sortie après les condensateurs
-
----
-
-## 7. Fabrication et commande
-
-- PCB et composants CMS : JLCPCB
-- Composants spécifiques (passifs de précision, inductance, bornier) : Vishay, Würth Elektronik, Coilcraft
-- Fichiers de fabrication (Gerber, perçage, positions) dans le dossier `fabrication/`
+Pour cette partie, j'ai essayé de respecter les consignes du Layout présentées sur la datasheet du convertisseur.
 
 ---
 
 
-## 10. Références
+## 7. Références
 
 - Datasheet LMQ61460-Q1, Texas Instruments
-- Documentation KiCad
 
 ---
 
