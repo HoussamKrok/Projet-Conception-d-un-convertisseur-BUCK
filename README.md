@@ -90,7 +90,7 @@ Les paramètres de choix sont la valeur de l'inductance et l'ondulation de coura
 
 $$L = \frac{V_{in} - V_{out}}{f_{sw} \cdot K \cdot I_{out,max}} \cdot \frac{V_{out}}{V_{in}}$$
 
-Application numérique ($V_{out}$ = 5 V, $V_{in}$ = 24 V, $f_{sw}$ = 2,1 MHz, K = 0,25, $I_{out,max}$ = 6 A) : **L ≈ 1,26 µH** → valeur normalisée retenue : **1,2 µH**.
+Application numérique ($V_{out}$ = 5 V, $V_{in}$ = 24 V, $f_{sw}$ = 1.86 MHz, K = 0,3, $I_{out,max}$ = 6 A) : **L ≈ 1,18 µH** → valeur normalisée retenue : **1,2 µH**.
 
 Remarques :
 - $I_{out,max}$ est le courant maximal que peut délivrer le circuit (6 A), et non le courant maximal d'une charge particulière.
