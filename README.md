@@ -1,4 +1,4 @@
-# Convertisseur Buck 6 A – PCB prototype (LMQ61460-Q1)
+# Convertisseur Buck – PCB prototype (LMQ61460-Q1)
 
 Conception d'un prototype de PCB pour un convertisseur abaisseur (buck) synchrone basé sur le **LMQ61460-Q1** de Texas Instruments, de la création du symbole KiCad jusqu'au choix des composants pour la fabrication.
 
@@ -12,7 +12,7 @@ Conception d'un prototype de PCB pour un convertisseur abaisseur (buck) synchron
 2. [Outils](#2-outils)
 3. [Schéma électrique](#3-schéma-électrique)
 4. [Dimensionnement](#4-dimensionnement)
-5. [Liste des composants](#5-liste-des-composants-bom)
+5. [Liste des composants](#5-liste-des-composants)
 6. [Routage du PCB](#6-routage-du-pcb)
 7. [Références](#7-références)
 
@@ -27,7 +27,7 @@ Conception d'un prototype de PCB pour un convertisseur abaisseur (buck) synchron
 | Tension d'entrée max | 30 V à 36 V selon le cas étudié |
 | Tension de sortie | 5 V (cas d'étude), ajustable via le diviseur de tension du FB |
 | Courant de sortie max | 6 A |
-| Fréquence de commutation | 1,85 MHz |
+| Fréquence de commutation | 1,86 MHz |
 | Ondulation de courant dans l'inductance | K = 25 % |
 | Commande | Mode courant, rétroaction externe (FB) |
 
@@ -146,7 +146,7 @@ Pour $f_{sw}$ = 2100 kHz, on obtient **R_RT ≈ 6 kΩ**. Valeur normalisée util
 | Rôle | Valeur | Boîtier  | Réf. commande | Fabricant |
 |---|---|---|---|---|
 | Convertisseur Buck | - | VQFN-14-HR | C1855832 | LCSC |
-| Condensateurs d'entrée (HF) | 2 × 100 nF | 0602 | 885012206095 | Würth |
+| Condensateurs d'entrée (HF) | 2 × 100 nF | 0603 | 885012206095 | Würth |
 | Condensateurs d'entrée | 2 × 4,7 µF | 1206 | 885012208094 | Würth |
 | Condensateur d'entrée (électrolytique) | 82 µF | [datasheet](https://www.we-online.com/components/products/datasheet/875075655003.pdf) | 875075655003 | Würth |
 | VCC | 1 µF | 0603 | 885012206052 | Würth |
