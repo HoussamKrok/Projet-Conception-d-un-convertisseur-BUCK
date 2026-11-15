@@ -165,9 +165,9 @@ Pour $f_{sw}$ = 2100 kHz, on obtient **R_RT ≈ 6 kΩ**. Valeur normalisée util
 
 ## 6. Routage du PCB
 
-![Routage du PCB](images/layout.png)
+![Routage du PCB](images/Layout_top.png)
 
-![Vue 3D](images/3d_view.png)
+![Vue 3D](images/3D_View.png)
 
 Pour cette partie, j'ai essayé de respecter les consignes du Layout présentées sur la datasheet du convertisseur.
 
