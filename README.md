@@ -161,7 +161,7 @@ Pour $f_{sw}$ = 2100 kHz, on obtient **R_RT ≈ 6 kΩ**. Valeur normalisée util
 | Cff | 33 pF | 0402 | 885012006020 | Würth |
 | Rff | 1 kΩ | 0603 | 560112116014 | Würth |
 | Condensateurs de sortie | 3 × 22 µF | 0805 | 885012107011 | Würth |
-| Connecteurs d'entrée/sortie | 2 × borniers à vis | – | 691214300002 | Würth |
+| Connecteurs d'entrée/sortie | 2 × borniers à vis | 3.81 mm | 691214300002 | Würth |
 
 ---
 
